@@ -34,10 +34,7 @@ namespace TraversalProject.Controllers
                 var userName = await _userManager.FindByNameAsync(User.Identity.Name);
                 ViewBag.userID = userName.Id; // sisteme giriş yapan kullanıcının id'si
             }
-            else
-            {
-                ViewBag.commentMessage = "Yorum yapabilmek için sisteme üye olmanız gerekmektedir!";
-            }
+          
             var values = _destinationService.TGetDestinationWithGuide(id);
             return View(values);
         }
