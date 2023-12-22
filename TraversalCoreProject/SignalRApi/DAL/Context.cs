@@ -2,7 +2,7 @@
 
 namespace SignalRApi.DAL
 {
-    public class Context:DbContext // Postgre SQL ile veritabanı işlemleri
+    public class Context:DbContext 
     {
         public Context(DbContextOptions<Context> options):base(options)
         {
